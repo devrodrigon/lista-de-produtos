@@ -1,0 +1,390 @@
+:root{
+    --color-primary: #12B886;
+    --color-secundary: rgba(18, 184, 134, 0.05);
+
+    --color-grey: #F1F3F5;
+    --color-grey1: #F8F9FA;
+    --color-grey3:#868E96;
+    --color-grey4: #212529;
+
+    --color-black:#212529;
+
+}
+html{
+    overflow-y: scroll;
+    scrollbar-color: #0A4C95 #C2D2E4;
+}
+
+html::-webkit-scrollbar{
+    width: 2em;
+}
+
+html::-webkit-scrollbar-track{
+    background: hsl(120 75% 58% / 1);
+    border-radius: 100%;
+    margin-bottom: .5rem;
+
+}
+html::-webkit-scrollbar-thumb{
+    background-color: hsl(120 100% 20% / 1);
+    border-radius: 100vw;
+}
+
+html::-webkit-scrollbar-thumb:hover{
+    background: hsl(120 100% 20% / 1);
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+.header{
+    background-color: #fff;
+    box-shadow: 0px 4px 40px -20px rgba(0, 0, 0, 0.25);
+    padding: 14px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header .logo{
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-black);
+}
+
+.container{
+    width: 80%;
+    max-width: 1600px;
+    margin: 39px auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 54px;
+}
+
+.container section header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.container section header .menu .secoes{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap:12px;
+    flex-wrap: wrap;
+}
+
+.container section header .menu .secoes .secao{
+    padding: 14px 26px;
+    background-color: var(--color-secundary);
+    color: var(--color-primary);
+    border-radius: 8px;
+}
+
+.container section header .menu .secoes .secao:hover{
+    cursor:pointer;
+}
+
+.container section header .menu .secoes .ativo{
+    padding: 14px 26px;
+    background-color: var(--color-primary);
+    color: #fff;
+    border-radius: 8px;
+}
+
+.container section header .secaoPesquisar{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap:10px;
+}
+
+.container section header .secaoPesquisar .campoBuscaPorNome{
+    background-color: var(--color-grey);
+    border: none;
+    padding: 14px 20px;
+}
+
+.container section header .secaoPesquisar .botaoBuscaPorNome{
+    background-color: var(--color-primary);
+    padding: 9px;
+    border: none;
+    border-radius: 8px;
+}
+
+.container section header .secaoPesquisar .botaoBuscaPorNome:hover{
+    cursor:pointer;
+}
+
+.container .vitrine{
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.container .vitrine .produtos{
+    display: grid;
+    gap: 25px;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: fit-content;
+    width: 70%;
+}
+
+.container .vitrine .produtos .produto{
+   display: flex;
+   flex-direction: column;
+   gap: 16px;
+   justify-content: space-between;
+}
+
+.container .vitrine .produtos .produto .produtoImg{
+    width: 100%;
+}
+
+.container .vitrine .produtos .produto .produtoNome{
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--color-black);
+}
+
+.container .vitrine .produtos .produto .produtoSecao{
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--color-grey3);
+}
+
+.container .vitrine .produtos .produto .nutrientes{
+    list-style: decimal;
+    list-style-position: inside;
+}
+
+.container .vitrine .produtos .produto .nutrientes .nutriente{
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--color-grey3);
+}
+
+.container .vitrine .produtos .produto div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container .vitrine .produtos .produto div .produtoPreco{
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--color-black);
+}
+
+.container .vitrine .produtos .produto div .botaoComprar{
+    border: none;
+    border-radius:8px;
+    background-color: var(--color-secundary);
+    color: var(--color-primary);
+    width: fit-content;
+    padding: 7px 10px;
+    font-weight: 500;
+    font-size: 11px;
+}
+
+.container .vitrine .produtos .produto div .botaoComprar:hover{
+    cursor: pointer;
+}
+
+.container .vitrine .carrinho{
+    width: 30%;
+}
+
+.container .vitrine .carrinho header{
+    display: flex;
+    justify-content: start;
+    gap: 18px;
+    align-items: center;
+    background-color: var(--color-primary);
+    padding: 20px;
+    border-radius: 12px 12px 0px 0px;
+}
+.container .vitrine .carrinho header h3{
+    color: #fff;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.container .vitrine .carrinho .carrinho-sem-item{
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    height: 268px;
+    background-color: var(--color-grey1);
+    align-items: center;
+    justify-content: center;
+}
+
+.container .vitrine .carrinho .carrinho-sem-item span{
+    text-align: center;
+    color: var(--color-grey3);
+    font-weight: 400;
+    font-size: 14px;
+    padding: 0 23px;
+}
+.container .vitrine .carrinho .carrinho-com-item{
+    display: none;
+    padding: 22px 0;
+}
+
+.container .vitrine .carrinho .carrinho-com-item .listaCarrinho{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-height: 268px;
+    overflow-y: scroll;
+}
+
+.container .vitrine .carrinho .carrinho-com-item .listaCarrinho .carrinhoProduto{
+    display: flex;
+    gap: 12px;
+    position: relative;
+}
+
+.container .vitrine .carrinho .carrinho-com-item .listaCarrinho .carrinhoProduto .carrinhoImg{
+    width: 70px;
+}
+
+.container .vitrine .carrinho .carrinho-com-item .listaCarrinho .carrinhoProduto .infoItemCarrinho {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.container .vitrine .carrinho .carrinho-com-item .listaCarrinho .carrinhoProduto .infoItemCarrinho .carrinhoNome{
+    font-weight: 500;
+    font-size: 14px;
+    color: #000;
+
+}
+
+.container .vitrine .carrinho .carrinho-com-item .listaCarrinho .carrinhoProduto .infoItemCarrinho .carrinhoSecao{
+    font-weight: 400;
+    font-size: 12px;
+    color: var(--color-grey3);
+}
+
+.container .vitrine .carrinho .carrinho-com-item .listaCarrinho .carrinhoProduto .infoItemCarrinho .carrinhoPreco{
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--color-grey4);
+}
+
+.container .vitrine .carrinho .carrinho-com-item .listaCarrinho .carrinhoProduto .excluirProduto{
+    background-color: var(--color-grey1);
+    position: absolute;
+    top: 0;
+    right: 10px;
+    padding: 7px;
+}
+
+.container .vitrine .carrinho .carrinho-com-item .listaCarrinho .carrinhoProduto .excluirProduto:hover{
+    cursor: pointer;
+}
+
+.container .vitrine .carrinho .infoCarrinho{
+    display: none;
+    flex-direction: column;
+    background-color: var(--color-grey1);
+}
+
+.container .vitrine .carrinho .infoCarrinho div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 13px;
+}
+
+.container .vitrine .carrinho .infoCarrinho div span{
+    font-weight: 500;
+    font-size: 12px;
+    color: #000;
+}
+
+@media screen and (max-width: 480px){
+    .container section header{
+        display: flex;
+        flex-direction: column;
+        gap:32px;
+        align-items: flex-start;
+
+    }
+
+    .container section header .menu{
+        width: 100%;
+    }
+
+    .container section header .menu .secoes{
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+    }
+
+    .container section header .menu .secoes .secao{
+        width: max-content;
+
+
+    }
+    
+    .container .vitrine {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .container .vitrine .produtos{
+        display: flex;
+        gap: 25px;
+        overflow-x: scroll;    
+    }
+
+    .container .vitrine .produtos .produto {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        width: 107px;
+        margin-bottom: 20px;
+    }
+
+    .container .vitrine .produtos .produto .nutrientes{
+        display: none;
+    }
+
+    .container .vitrine .carrinho{
+        width: 100%;
+    }
+
+    .container .vitrine .carrinho header{
+        display: flex;
+        flex-direction: row;  
+    }
+
+}
+
+@media screen and (max-width: 768px){
+    .container .vitrine {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .container .vitrine .produtos{
+        width: 100%;
+    }
+
+    .container .vitrine .carrinho{
+        width: 100%;
+    }
+}

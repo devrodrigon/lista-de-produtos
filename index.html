@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista de Produtos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/css/reset.css" />
+    <link rel="stylesheet" href="./src/css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="logo">Shop now</h1>
+    </header>
+    <main class="container">
+      <section>
+        <header>
+          <nav class="menu">
+            <ul class="secoes">
+              <li class="secao ativo">Todos Produtos</li>
+              <li class="secao">Hortifruti</li>
+              <li class="secao">Panificadora</li>
+              <li class="secao">Laticínio</li>
+            </ul>
+          </nav>
+          <aside class="secaoPesquisar">
+            <input type="text" class="campoBuscaPorNome" placeholder="Pesquisar por" />
+            <button class="botaoBuscaPorNome" type="button">
+              <img src="./src/img/search.svg" alt="" />
+            </button>
+          </aside>
+        </header>
+      </section>
+      <section class="vitrine">
+        <ul class="produtos"></ul>
+        <aside class="carrinho">
+          <header>
+            <img src="./src/img/shopping-cart.svg" alt="" />
+            <h3>Carrinho</h3>
+          </header>
+          <section class="carrinho-sem-item">
+            <img src="./src/img/shopping-bag.svg" alt="" />
+            <span>Por enquanto não temos produtos no carrinho</span>
+          </section>
+          <section class="carrinho-com-item">
+            <ul class="listaCarrinho"></ul>
+          </section>
+          <section class="infoCarrinho">
+            <div>
+              <span>Quantidade</span>
+              <span class="quantidadeCarrinho">2</span>
+            </div>
+            <div>
+              <span> Total </span>
+              <span class="totalCarrinho">R$ 2,00</span>
+            </div>
+          </section>
+        </aside>
+      </section>
+    </main>
+
+    <script src="./src/js/dataProdutos.js"></script>
+    <script src="./src/js/script.js"></script>
+  </body>
+</html>
